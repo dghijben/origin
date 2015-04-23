@@ -63,32 +63,16 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="clearfix">
-      <div class="pull-right">
-        <span class="glyphicon glyphicon-time"></span>
-        {{currentTime | date:'medium'}}
-      </div>
-    </div>
-    <div ng-view=""></div>
-  </div>
-
+  <div ng-view=""></div>
+  
   <div class="footer">
     <div class="container">
-      <p><span class="glyphicon glyphicon-heart"></span> {{"views.index.from the Yeoman team" | translate}}</p>
+      <p>{{"views.index.Copyright" | translate}} &copy; {{"views.index.Copyright year" | translate}}</p>
+
     </div>
   </div>
 </div>
 
-<!-- BOTTOM RIGHT GITHUB RIBBON -->
-<div class="github-fork-ribbon-wrapper right-bottom" hidden-when-loading>
-  <div class="github-fork-ribbon">
-    <a href="https://github.com/malyw/angular-translate-yeoman">
-      {{"views.Fork me on" | translate}}
-      GitHub
-    </a>
-  </div>
-</div>
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
