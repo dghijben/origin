@@ -1,0 +1,994 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+
+
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fff;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   AJR custom styles
+   ========================================================================== */
+
+.hide {
+	display: none;	
+}
+
+p, li {
+	font-family:'Helvetica', arial, sans-serif;
+	font-size: 100%;
+    font-weight: 300;
+}
+
+.white {
+	color: #F0F0F0;
+}
+
+.benefits {
+	background: #ECECEC;
+}
+
+.disruptive-section {
+	background: #FFF;
+	color: #FFFFFF;
+}
+
+.header {
+	background: #ECECEC;
+	height: 88px;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+}
+
+.header img {
+	float: left;
+	margin: 21px 0 21px 21px;
+}
+
+.header-left-highlight {
+	background: #fede00;
+	width: 5px;
+	height: 88px;
+	float: left;
+}
+
+.header ul {
+	float: right;
+	margin: 0;
+}
+
+.header li {
+	display: inline;
+	float: left;
+	padding: 0 20px;
+	height: 88px;
+}
+
+.header li a {
+	font-weight: 700;
+	font-size: 40px;
+	color: #000;
+	text-decoration: none;
+	line-height: 88px;
+}
+
+.header li.active-tab {
+	background: #444;
+}
+
+.header li.active-tab a {
+	color: #fede00;
+}
+
+#disruptive-anchor {
+	position: absolute;
+	margin-top: -86px;
+}
+
+#thinking-anchor,
+#delivers-anchor,
+#results-anchor,
+#contact-anchor {
+	position: absolute;
+	margin-top: -86px;
+}
+
+.thinking-padding {
+	padding-left: 97px;
+}
+
+#access-anchor {
+	position: absolute;
+	margin-top: -300px;
+}
+
+.full-col {
+	width: 100%;
+	float: left;
+	clear: both;
+	overflow: hidden;
+}
+
+.video-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.video-background video { 
+	width: 100%; 
+}
+
+#video-title {
+	float: left;
+	z-index: 2;
+	position: relative;
+	margin: 30% 0 0 50px;
+	width: 100%;
+}
+
+#scroll-arrow {
+	float: left;
+	clear: both;
+	z-index: 1;
+	position: relative;
+	margin: 5% 0 0 47.5%;
+	width: 5%;
+	cursor: pointer;
+}
+
+#scroll-arrow img {
+	width: 100%;
+}
+
+#share {
+	z-index: 5;
+	position: fixed;
+	bottom: 27px;
+	right: -280px;
+	width: 346px;
+	height: 51px;
+	overflow: hidden;
+	background: #f0f0f0;
+	cursor: pointer;
+	float: left;
+}
+
+#contact-link {
+	z-index: 5;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 66px;
+	height: 25px;
+	overflow: hidden;
+	background: #f0f0f0;
+	cursor: pointer;
+	float: left;
+}
+
+#share img {
+	float: left;
+}
+
+#share-buttons {
+	width: 280px;
+	overflow: hidden;
+	float: left;
+	margin-top: 11px;
+}
+
+.video-no-padding {
+	width: 100%;
+	float: left;
+	clear: both;
+	overflow: hidden;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+	margin-top: -10px;
+	position: relative;
+}
+
+.video-no-padding iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.col-padding {
+	padding: 0 50px; 	
+}
+
+.col-no-padding {
+	padding: 0; 	
+}
+
+#content {
+	float: left;
+	margin: 88px 0 0;
+	width: 100%;
+}
+
+.video {
+	background: #fff;
+	width: 100%;
+	position: relative;
+	float: left;
+}
+
+.disruptive {
+	width: 100%;
+	position: relative;
+	z-index: 0;
+	float: left;
+}
+
+.disruptive h1, 
+.strapline h1, 
+.results h1  {
+	float: left;
+	margin: 50px 50px 0;
+	padding-bottom: 50px;
+	font-weight: 400;
+	font-size: 26px;
+	color: #f0f0f0;
+	text-decoration: none;
+	line-height: 1.4em;
+}
+
+.disruptive-1 {
+	float: left;
+	background: #666;
+	width: 50%;
+	position: relative;
+}
+
+.disruptive-1-top-border {
+	float: left;
+	width: 100%;
+	position: relative;
+	height: 4px;
+	background: #fff;
+}
+
+.disruptive-2 {
+	float: left;
+	background: #444;
+	width: 70.83%;
+	position: relative;
+	border-top: solid 2px #fff;
+}
+
+.disruptive-3 {
+	float: left;
+	background: #2d2c29;
+	width: 91.66%;
+	position: relative;
+	border-top: solid 2px #fff;
+	font-style: italic;
+}
+
+.disruptive-3 h1, .footer h1, {
+	font-weight: 400;
+}
+
+
+.thinking {
+	background: #dadada url(../img/thinking-bg.jpg) no-repeat;
+	background-size: cover;
+	width: 100%;
+	position: relative;
+	float: left;
+}
+
+.thinking-panel {
+	margin-left: 23%;
+	margin-top: 40px;
+	margin-right: 23%;
+	position: relative;
+	padding-left: 120px;
+}
+
+.thinking-panel.panel-1 {
+	margin-top: 80px;
+	background: url(../img/thinking-1.png) no-repeat;
+}
+
+.thinking-panel.panel-2 {
+	background: url(../img/thinking-2.png) no-repeat;
+}
+
+.thinking-panel.panel-3 {
+	margin-bottom: 150px;
+	background: url(../img/thinking-3.png) no-repeat;
+}
+
+.thinking-panel li, 
+.deliver-col li, 
+.client-overlay-right li {
+	margin-left: -40px;
+	list-style-type: none;
+	padding-left: 15px;
+}
+
+.delivers li {
+	color: #FFF;
+}
+
+.thinking-panel li {
+	background: url(../img/bullet-dark.gif) no-repeat 0 10px;
+}
+
+.deliver-col li, .client-overlay-right li {
+	background: url(../img/bullet-light.gif) no-repeat 0 10px;
+}
+
+.delivers {
+	background: #2D2C29;
+	width: 100%;
+	position: relative;
+	float: left;
+}
+
+.deliver-heading {
+	font-size: 26px;
+	font-weight: 400;
+	margin: 80px 0 60px;
+	float: left;
+}
+
+.deliver-col, 
+.contact-col, 
+.contact-col-fb {
+	width: 25%;
+	position: relative;
+	float: left;
+	display: inline;
+}
+
+.deliver-col img {
+	width: 100%;
+}
+
+.deliver-col-padding {
+	padding-bottom: 80px;
+	padding-top: 20px;
+	position: relative;
+	float: left;
+}
+
+.deliver-col ul, .client-overlay-right ul {
+	position: relative;
+	float: left;
+	margin: 30px 0 0 0;
+	color: #a5a398;
+}
+
+.results {
+	background: #ececec url(../img/results-bg.jpg) no-repeat;
+	background-size: cover;
+	width: 100%;
+	position: relative;
+	float: left;
+}
+
+.results-padding {
+	padding-top: 80px;
+	padding-bottom: 40px;
+	float: left;
+}
+
+.results h1 {
+	color: #2c2c27!important;
+	padding: 0 0 40px;
+	margin: 0;
+}
+
+#slideshow-panel {
+	width: 100%;
+	height: 400px;
+	background: #fff;
+	float: left;
+	position: relative;
+}
+
+#main-slideshow {
+	width: 100%!important;
+	height: 400px;
+	z-index: 2!important;
+	position: relative;
+	background: #fff;
+	float: left;	
+}
+
+#main-slideshow img {
+	border-bottom: 10px solid #fede00;
+	width: 80%;
+	cursor: pointer;
+	float: left;
+}
+
+.slide {
+	width: 33.3%;
+	float: left;
+	z-index: 2!important;
+	position: relative;
+	background: #fff;
+}
+
+.slide h1 {
+	float: left;
+	clear: both;
+	margin: 20px 20px 0 0;
+	width: 80%;
+	font-weight: 700;
+	font-size: 130%;
+	color: #2c2c27;
+	line-height: 1.4em;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.slide-container {
+	width: 75%;
+	margin-left: 12.5%;
+	margin-top: 50px;
+}
+
+.prev {
+	position: absolute;
+	top: 167px;
+	left: 4%;
+	z-index: 3;
+	background: url(../img/go-left.png) no-repeat;
+	width: 34px;
+	height: 67px;
+	cursor: pointer;
+}
+
+.next {
+	position: absolute;
+	top: 167px;
+	right: 4%;
+	z-index: 3;
+	background: url(../img/go-right.png) no-repeat;
+	width: 34px;
+	height: 67px;
+	cursor: pointer;
+}
+
+.client-slideshow {
+	width: 100%;
+	height: 900px;
+}
+
+.client-slideshow img {
+	width: 100%!important;
+}
+
+.client-ctrls {
+	clear: both;
+	float: left;
+}
+
+.client-next, 
+.client-prev {
+	float: left;
+	display: inline;
+	color: #f0f0f0;
+	cursor: pointer;
+	text-decoration: underline;
+	margin-right: 20px;	
+	font-size: 100%;	
+}
+
+.client-overlay {
+	position: fixed;
+	top: 88px;
+	left: 0;
+	z-index: 8;
+	width: 100%;
+	height: 90%;
+	background: #444;
+	overflow: scroll;
+}
+
+.close-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 56px;
+	height: 53px;
+	background: url(../img/close-overlay.gif) no-repeat;
+	cursor: pointer;
+	z-index: 9;
+}
+
+.client-overlay-left {
+	position: relative;
+	float: left;
+	width: 49%;
+	display: inline;
+}
+
+.client-overlay-left-padding {
+	float: left;
+	display: inline;
+	padding: 10% 0 10% 10%;
+	width: 90%;
+}
+
+.client-overlay-right {
+	position: relative;
+	float: left;
+	display: inline;
+	width: 49%;
+	color: #f0f0f0;
+}
+
+.client-overlay-right-padding {
+	float: left;
+	padding: 10%;
+	display: inline;
+}
+
+.client-overlay-right p,
+.client-overlay-right h1,
+.client-overlay-right ul {
+	color: #a5a398;
+	margin: 0 0 20px;
+	font-size: 100%;
+	float: left;
+	clear: both;
+}
+
+.client-overlay-right h1,
+.client-overlay-right h2,
+.client-overlay-right h3 {
+	color: #f0f0f0;
+	font-size: 100%;
+	font-weight: 400;
+	margin-top: 10px!important;
+	float: left;
+	clear: both;
+}
+
+.client-overlay-right h1 {
+	font-size: 140%;
+}
+
+.client-overlay-right a {
+	color: #f0f0f0;
+	font-size: 100%;
+	font-weight: 400;
+}
+
+.yellow-highlight {
+	color: #fede00!important;
+}	
+
+.video-vertical {
+	width: 100%;
+	float: left;
+	margin-bottom: 25px;
+}
+
+.video-wrapper {
+	position: relative!important;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.contact {
+	background: #2D2C29;
+	width: 100%;
+	position: relative;
+	float: left;
+}
+
+.contact-col-padding {
+	margin-top: 80px;
+	margin-right: 20%; 
+	padding-bottom: 20px;
+	position: relative;
+	float: left;
+}
+
+.contact-col, 
+.contact-col-fb, 
+.contact-col-form {
+	padding-bottom: 80px;
+}
+
+.contact-col-fb {
+	margin-top: 34px;
+}
+
+.fb_ltr {
+	background: white;
+}
+
+
+
+#find-us-on {
+	border-top: 1px solid #555;
+	width: 90%;
+	float: left;
+	clear: both;
+	padding-top: 20px;
+	color: #a5a398; 
+	line-height: 40px;
+}
+
+#find-us-on a {
+	color: #a5a398; 
+}
+
+#find-us-on img {
+	border: 0;
+	margin: 0 5px; 
+}
+
+#access {
+	width: 22.636%;
+	background: #2d2c29;
+	position: absolute;
+	bottom: 0;
+	right: 50px;
+	z-index: 1;
+}
+
+#access-padding {
+	padding: 30px;
+	float: left;
+}
+
+#access-padding p, #access-padding a {
+	color: #a5a398;
+}
+
+
+.strapline {
+	float: left;
+	background: #2d2c29;
+	position: relative;
+	font-style: italic;
+	border-bottom: 1px solid #555;
+	color: #f0f0f0;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-device-width : 1024px) {
+
+	.video-background video {
+		display: none;
+	}
+	.video-background {
+		background: url(../video/disruptive.jpg);
+		background-size: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 1030px) {
+
+	.header li a {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+
+	.header li a {
+		font-size: 20px;
+	}
+		.contact-col-fb {
+		clear: both;
+	}
+	.contact-col-fb .contact-col-padding {
+		margin-top: 0;
+	}
+	.contact-col-form {
+		width: 75%;
+		position: relative;
+		float: left;
+		display: inline;
+	}
+}
+
+@media only screen and (max-width: 730px) {
+
+	.header li a {
+		font-size: 15px;
+	}
+	
+	.contact-col-fb {
+		clear: both;
+	}
+	.contact-col-fb .contact-col-padding {
+		margin-top: 0;
+	}
+	.contact-col-form {
+		width: 75%;
+		position: relative;
+		float: left;
+		display: inline;
+	}
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    
+}
+
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

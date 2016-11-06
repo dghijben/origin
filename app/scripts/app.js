@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'pascalprecht.translate',
-    'tmh.dynamicLocale'
+    'tmh.dynamicLocale',
+    'uiGmapgoogle-maps'
   ])
 
   .constant('DEBUG_MODE', /*DEBUG_MODE*/true/*DEBUG_MODE*/)
@@ -29,6 +30,14 @@ angular
     },
     'preferredLocale': 'en_US'
   })
+
+
+  //autoscroll back to top on view change
+  .run(['$window', '$rootScope', '$location', function($window, $rootScope, $location){
+    $rootScope.$on('$viewContentLoaded', function(){ window.scrollTo(0, 0); });
+  }])
+
+    
   // Router
   .config(function ($routeProvider) {
     $routeProvider
@@ -43,6 +52,14 @@ angular
       .when('/contacts', {
         templateUrl: 'views/contacts.html',
         controller: 'ContactsCtrl'
+      })
+      .when('/terms', {
+        templateUrl: 'views/terms.html',
+        controller: 'TermsCtrl'
+      })
+      .when('/creative', {
+        templateUrl: 'views/creative.html',
+        controller: 'CreativeCtrl'
       })
       .otherwise({
         redirectTo: '/'

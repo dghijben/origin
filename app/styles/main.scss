@@ -6,7 +6,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "mixins";
 @import "components/header";
 @import "views/about";
+@import "views/creative";
 @import "components/loading";
+
+
 
 .browsehappy {
   margin: 0.2em 0;
@@ -17,7 +20,40 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background-color: #090909;
+  position: relative;
+  /*font-family: "Helvetica Neue", "ヒラギノ角ゴシック Std W7";*/
 }
+
+/*  ng-view Animation  */
+.view-slide-in.ng-enter {
+  transition: all 2s ease;
+  -webkit-transition:all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  
+  opacity:0.2;
+  position:relative;
+  opacity:0;
+  top:0;
+  left:0;
+}
+.view-slide-in.ng-enter {
+  opacity: 0;
+}
+.view-slide-in.ng-enter.ng-enter-active {
+  top:0;
+  left:0;
+  opacity: 1;
+}
+
+
+
+.row {
+  padding-bottom: 40px;
+}
+
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -29,7 +65,6 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 0px;
 
   /* Make the masthead heading the same height as the navigation */
@@ -45,7 +80,6 @@ body {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -54,15 +88,234 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  position: relative;
+  min-height: 150px !important; /* In case window becomes too narrow */
+  height: 500px; /* create control for this value */ 
+  background-color: #333333; /* Shows while the image is loading */
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url('../images/hachiko_.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0; /* Best for responsive */
+  background-attachment: fixed;
+  color: #FFF;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+  margin-bottom: 0;
 }
 
+.jumbotron:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    content: ' ';
+    background: #000;
+    opacity: 0.1;
+}
+
+.jumbotron .wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    max-width: 600px;
+    padding: 0 15px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.jumbotron .wrap img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.jumbotron .wrap h1 {
+  width: 300px;
+  font-size: 1.5em;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* Other page jumbotrons */
+.jumbotron-other {
+  position: relative;
+  min-height: 150px !important; /* In case window becomes too narrow */
+  height: 250px; /* create control for this value */ 
+  background-color: #333333; /* Shows while the image is loading */
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url('../images/hachiko_.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0; /* Best for responsive */
+  background-attachment: fixed;
+  color: #FFF;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.jumbotron-other:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    content: ' ';
+    background: #000;
+    opacity: 0.1;
+}
+
+.jumbotron-other .wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    padding: 0 15px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.about {
+  background: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.top-lead {
+  margin-top: 20px;
+}
+.services {
+  background: #F5F5F5;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.bus-dev-lead {
+  margin-bottom: 20px;
+
+}
+
+/*.bus-dev-lead h2 {
+  position: relative;
+  padding-left: 28px;
+}
+.bus-dev-lead h2:after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 28px;
+  display: block;
+  background: #000;
+  content: "";
+  height: 7px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.mark-strat-lead h2 {
+  position: relative;
+  padding-left: 28px;
+}
+
+.mark-strat-lead h2:after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 28px;
+  display: block;
+  background: #000;
+  content: "";
+  height: 7px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}*/
+
+.ul-inbound {
+  padding-left: 17px;
+}
+
+/*.services:before {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0;
+  width: 40px;
+  display: block;
+  margin-bottom: 0.7em;
+  background: #000;
+  content: "";
+  height: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}*/
+
+.strategy {
+  background: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.inquiry {
+  background: #E3E3E3;
+  position: relative;
+  height:670px;
+}
+
+.toast {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+input[type="text"] {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding-left: 12px;
+}
+
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    height: 120px;
+    border-color: #ccc;
+}
+
+label {
+  display: block;
+}
+
+.btn {
+  border-radius: 0px;
+  height: 40px;
+}
+
+.ss-form {
+  width: 100%;
+  padding-top:20px;
+}
+
+.ss-form-entry {
+  margin-bottom: 16px;
+}
+
+.ss-q-title {
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.ss-form-question {
+  display: block;
+}
+.contact {
+  background: #FFF;
+  padding: 40px;
+}
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
@@ -76,43 +329,217 @@ body {
   border-radius: 0px;
   margin-bottom: 0px;
 }
+
+.navbar-inverse {
+  background-color: #090909;
+}
 .row {
   margin-left: 0px;
   margin-right: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.angular-google-map-container {
+  height: 300px;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.address {
+  height: 240px;
+  background: #030303;
+  width: 240px;
+  position: relative;
+  z-index: 4;
+  color: #fff;
+}
+
+.address .row {
+  padding: 15px;
+  padding-top: 80px;
+}
+
+.address .row img {
+  width: 130px;
+  padding-bottom: 5px;
+  /* margin: 0 auto; */
+}
+
+.linked-in {
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+}
+
+.footer {
+  color: #FFF;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.footer a {
+  color: #FFF;
+}
+
+.terms {
+  background: #FFF;
+}
+
+.creative {
+  background: #FFF;
+}
+
+.return-home {
+  background: #FFF;
+}
+
+.return-home a {
+  color: #000;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+
   .container {
     max-width: 768px;
   }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+  .angular-google-map-container {
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 0px;
+  .address {
+    height: 240px;
+    background: #030303;
+    width: 240px;
+    position: absolute;
+    bottom: 140px;
+    right: 0px;
+    z-index: 4;
+    color: #fff;
   }
+
+  .address .row {
+    padding: 15px;
+    padding-top: 80px;
+  }
+
+  .address .row img {
+    width: 130px;
+    padding-bottom: 5px;
+    /* margin: 0 auto; */
+  }
+  
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
-    border-bottom: 0;
+    position: relative;
+    min-height: 150px !important; /* In case window becomes too narrow */
+    height: 85vh; /* create control for this value */ 
+    background-color: #333333; /* Shows while the image is loading */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url('../images/hachiko_.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0; /* Best for responsive */
+    background-attachment: fixed;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 0;
+    
   }
+
+  .jumbotron:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    content: ' ';
+    background: #000;
+    opacity: 0.1;
+  }
+
+  .jumbotron .wrap img {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .jumbotron .wrap h1 {
+    width: 400px;
+    font-size: 2.1em;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  /* Other page jumbotrons */
+  .jumbotron-other {
+    position: relative;
+    min-height: 150px !important; /* In case window becomes too narrow */
+    height: 40vh; /* create control for this value */ 
+    background-color: #333333; /* Shows while the image is loading */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url('../images/hachiko_.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0; /* Best for responsive */
+    background-attachment: fixed;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .jumbotron-other:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: block;
+      content: ' ';
+      background: #000;
+      opacity: 0.1;
+  }
+
+  .jumbotron-other .wrap {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: auto;
+      padding: 0 15px;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+  }
+
+
+
   .navbar {
-  border-radius: 0px;
-  margin-bottom: 0px;
-}
+    border-radius: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 #app-loading-wrapper {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   z-index: 999;
 
   .app-loading {

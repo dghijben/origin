@@ -1,18 +1,211 @@
 <div class="jumbotron">
-  <h2>{{"views.main.Origin is a Tokyo based advisory & management company." | translate}}</h2>
+  <div class="wrap">
+    <img class="img-responsive" src="images/white_logo.png">
+    <h1>{{"views.main.jumbotron lead line 1" | translate}}<br>{{"views.main.jumbotron lead line 2" | translate}}<br>{{"views.main.jumbotron lead line 3" | translate}}</h1>
 
-  <!-- <p class="lead">
-    <img ng-src="images/no-filerev/yeoman-{{locale}}.png?v={{VERSION_TAG}}" alt="{{'views.main.I\'m Yeoman' | translate}}"><br>
-  </p> -->
+    <!-- <p class="lead">
+      <img ng-src="images/no-filerev/yeoman-{{locale}}.png?v={{VERSION_TAG}}" alt="{{'views.main.I\'m Yeoman' | translate}}"><br>
+    </p> -->
+  </div>
 </div>
 
-<div class="row">
+<div class="row about">
   <div class="container">
-    <p>
-    {{"views.main.Origin provide advisory and executive management services to select clients." | translate}}
-    </p>
-    <p>
-    {{"views.main.We facilitate cross-border business and offer services in market entry localisation, communications strategy, business matching, business operations and e-commerce." | translate}}
-    </p>
+    <div class="col-sm-12">
+      <p class="lead top-lead">{{"views.main.about paragraph 1" | translate}}
+      </p>
+      <p class="lead">{{"views.main.about paragraph 2" | translate}}
+      </p>
+      <p class="lead">{{"views.main.about paragraph 3" | translate}}
+      </p>
+    </div>
   </div>
+</div>
+
+<div class="row services">
+  <div class="container">
+    <div class="col-sm-12 bus-dev-lead">
+      <h2>{{"views.main.business development" | translate}}</h2>
+    </div>
+    <div class="col-sm-12">
+      <p>{{"views.main.services lead" | translate}}</p>
+      <p>{{"views.main.services team paragraph 1" | translate}}</p>
+      <p>{{"views.main.services team paragraph 2" | translate}}</p>
+    </div>
+    <div class="col-sm-6">
+      <h3>{{"views.main.inbound" | translate}}</h3>
+      <p>{{"views.main.inbound paragraph 1" | translate}}</p>
+      <ul class="ul-inbound">
+        <li>{{"views.main.inbound li 1" | translate}}</li>
+        <li>{{"views.main.inbound li 2" | translate}}</li>
+        <li>{{"views.main.inbound li 3" | translate}}</li>
+        <li>{{"views.main.inbound li 4" | translate}}</li>
+        <li>{{"views.main.inbound li 5" | translate}}</li>
+        <li>{{"views.main.inbound li 6" | translate}}</li>
+      </ul>
+    </div> 
+    <div class="col-sm-6">
+      <h3>{{"views.main.outbound" | translate}}</h3>
+      <p>{{"views.main.outbound paragraph 1" | translate}}</p>
+      <ul class="ul-inbound">
+        <li>{{"views.main.outbound li 1" | translate}}</li>
+        <li>{{"views.main.outbound li 2" | translate}}</li>
+        <li>{{"views.main.outbound li 3" | translate}}</li>
+        <li>{{"views.main.outbound li 4" | translate}}</li>
+        <li>{{"views.main.outbound li 5" | translate}}</li>
+      </ul>
+      <p>{{"views.main.outbound paragraph 2" | translate}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="row strategy">
+  <div class="container">
+      <div class="col-sm-12">
+        <h2>{{"views.main.strategy" | translate}}</h2>
+      </div>
+
+      <div class="col-sm-6">
+        <h3>{{"views.main.engage" | translate}}</h3>
+        <p>{{"views.main.engage paragraph 1" | translate}}</p>
+      </div>
+      
+      <div class="col-sm-6">
+        <h3>{{"views.main.craft" | translate}}</h3>
+        <p>{{"views.main.craft paragraph 1" | translate}}</p>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-sm-6">
+        <h3>{{"views.main.plan" | translate}}</h3>
+        <p>{{"views.main.plan paragraph 1" | translate}}</p>
+      </div>
+      
+      <div class="col-sm-6">
+        <h3>{{"views.main.work" | translate}}</h3>
+        <p>{{"views.main.work paragraph 1" | translate}}</p>
+      </div>
+      
+      
+  </div>
+</div>
+<!--<form action="https://docs.google.com/forms/d/1M2cJnQy4aajEeDX3Xm_EWUd_QH_NoumCoeFMzD1GMJc/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">-->
+<div class="row inquiry">
+  <div class="container">
+    <div class="col-sm-12">
+      <h2>{{"views.main.enquiries" | translate}}</h2>
+    </div>
+    <div class="col-sm-12">
+      <div class="ss-form" id="ss-form">
+        <form target="fake-target" method="POST" action="https://docs.google.com/forms/d/1M2cJnQy4aajEeDX3Xm_EWUd_QH_NoumCoeFMzD1GMJc/formResponse" onsubmit="customMessage(); return true;">
+          <ol role="list" class="ss-question-list" style="padding-left: 0">
+            <div class="ss-form-question errorbox-good" role="listitem">
+              <div dir="ltr" class="ss-item  ss-text">
+                <div class="ss-form-entry">
+                  <label class="ss-q-item-label" for="entry_1386980837">
+                    <div class="ss-q-title">{{"views.main.name" | translate}}</div>
+                    <!-- <div class="ss-q-help ss-secondary-text" dir="ltr">Please enter your full name</div> -->
+                  </label>
+                  <input type="text" name="entry.1386980837" value="" class="ss-q-short" id="entry_1386980837" dir="auto" aria-label="Name Please enter your full name" title="" translate><!-- translate-attr-placeholder="views.main.nameplaceholder" removed from input -->
+                  <div class="error-message" id="1627764549_errorMessage"></div>
+                  <!-- <div class="required-message">This is a required question</div> -->
+                </div>
+              </div>
+            </div>
+            <div class="ss-form-question errorbox-good" role="listitem">
+              <div dir="ltr" class="ss-item  ss-text">
+                <div class="ss-form-entry">
+                  <label class="ss-q-item-label" for="entry_1391671483">
+                    <div class="ss-q-title">{{"views.main.email" | translate}}</div>
+                    <!-- <div class="ss-q-help ss-secondary-text" dir="ltr">Please enter your email address</div> -->
+                  </label>
+                  <input type="text" name="entry.1391671483" value="" class="ss-q-short" id="entry_1391671483" dir="auto" aria-label="Email Please enter your email address " title="">
+                  <div class="error-message" id="852636141_errorMessage"></div>
+                  <!-- <div class="required-message">This is a required question</div> -->
+                </div>
+              </div>
+            </div>
+            <div class="ss-form-question errorbox-good" role="listitem">
+              <div dir="ltr" class="ss-item  ss-text">
+                <div class="ss-form-entry">
+                  <label class="ss-q-item-label" for="entry_2111541104">
+                    <div class="ss-q-title">{{"views.main.subject" | translate}}</div>
+                    <!-- <div class="ss-q-help ss-secondary-text" dir="ltr">Please enter the nature of your inquiry</div> -->
+                  </label>
+                  <input type="text" name="entry.2111541104" value="" class="ss-q-short" id="entry_2111541104" dir="auto" aria-label="Subject Please enter the nature of your inquiry " title="">
+                  <div class="error-message" id="1956329003_errorMessage"></div>
+                  <!-- <div class="required-message">This is a required question</div> -->
+                </div>
+              </div>
+            </div>
+            <div class="ss-form-question errorbox-good" role="listitem">
+              <div dir="ltr" class="ss-item  ss-paragraph-text">
+                <div class="ss-form-entry">
+                  <label class="ss-q-item-label" for="entry_748690325">
+                    <div class="ss-q-title">{{"views.main.message" | translate}}</div>
+                    <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+                  </label>
+                  <textarea name="entry.748690325" rows="8" cols="0" class="ss-q-long" id="entry_748690325" dir="auto" aria-label="Message  "></textarea>
+                  <div class="error-message" id="1323418108_errorMessage"></div>
+                  <!-- <div class="required-message">This is a required question</div> -->
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="draftResponse" value="[,,&quot;6679785518708204908&quot;]">
+            <input type="hidden" name="pageHistory" value="0">
+            <input type="hidden" name="fbzx" value="6679785518708204908">
+            <div class="ss-item ss-navigate">
+              <table id="navigation-table">
+                <tbody>
+                  <tr>
+                    <td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+                      <input type="submit" translate translate-attr-value="views.main.submit" name="submit" value="Submit" id="ss-submit" class="btn btn-default">
+                      <!--<div class="ss-password-warning ss-secondary-text">Never submit passwords through Google Forms.</div> -->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </ol>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="ss-form-container" style="display: none;" id="form-message">
+    <h4 class='toast lead'>{{"views.main.thankyou" | translate}}</h4>
+  </div>
+  <iframe src="#" id="fake-target" name="fake-target" style="width:0px; height:0px; border:0px;"></iframe>
+</div>
+
+<!-- <div class="row inquiry">
+  <div class="container">
+    <button ng-click="toggleModal()" class="btn btn-default">Open modal</button>
+    <modal title="Enquiry" visible="showModal">
+    </modal>
+  </div>
+</div> -->  
+
+<ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
+  <ui-gmap-marker coords="marker.coords" idKey="marker.id">
+  </ui-gmap-marker>
+</ui-gmap-google-map>
+<div class="address">
+  <div class="row">
+      <img class="img-responsive" src="images/white_logo.png">
+      
+      <p>Origin {{"views.index.Company" | translate}}<br> 
+        {{"views.index.Company Address line 1" | translate}}<br>
+        {{"views.index.Company Address line 2" | translate}}<br>
+        {{"views.index.Company Address line 3" | translate}}<br>
+        {{"views.index.Company Address line 4" | translate}}<br>
+      </p>
+
+      <p>tel: +81 (0) 80 4209 3330</p>
+  </div>
+</div>
+<div class="footer">
+  <ul class="list-inline list-unstyled">
+    <li class="footer-content">&copy; {{"views.index.Copyright year" | translate}} Origin {{"views.index.Company" | translate}}</li>
+    <li><a ng-href="#/terms">Terms</a></li>
+  </ul>
+  <a class="linked-in" target="_blank" href="https://www.linkedin.com/in/jasonskala"><i class="fa fa-linkedin"></i></a>
 </div>

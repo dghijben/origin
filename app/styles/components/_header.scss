@@ -6,10 +6,40 @@
 .language-select {
   $height: $font-size-base*$line-height-base + 14px;
   line-height: $height;
-  margin-top: 8px;
+  position:absolute;
+  top:17px;
+  right:30px;
+  z-index:5;
 
   select {
-    -webkit-appearance: menulist-button;
+    /* -webkit-appearance: menulist-button; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     height: $height;
+    background: none;
+    color: #fff; /* change back to fff */
+    border: none;
   }
+  label {
+  	font-weight: normal;
+  }
+}
+
+.navbar {
+	height: 80px;
+}
+.navbar-header {
+	padding-top: 9px;
+}
+.navbar-brand {
+	width: 180px;
+	padding: 0;
+	padding-top: 14px;
+	padding-right: 10px;
+	padding-left: 12px;
+}
+
+button:focus, label:focus, select:focus {
+	outline:0 !important;
 }

@@ -2,10 +2,15 @@
 <html class="no-js app-loading" ng-app="translateApp">
 <head>
   <meta charset="utf-8">
-  <title ng-bind="pageTitle">i18n for your AngularJS applications</title>
-  <meta name="description" ng-attr-content="{{pageContent}}" content="How to translate your AngularJS applications without page reload with angular-translate">
-  <meta name="viewport" content="width=device-width">
+  <title ng-bind="pageTitle">Origin | a Tokyo based
+business development & strategy company</title>
+  <meta name="description" ng-attr-content="{{pageContent}}" content="We facilitate cross-border business development and offer services in market strategy and market entry through local market experience and established networks. Origin provide localisation strategy, communications and marketing campaign planning as well as business matching, business operations and eCommerce solutions.">
+  <meta name="keywords" content="Origin Tokyo, Origin Japan, branding agency tokyo, creative agency tokyo, marketing agency japan, japan market entry, business in japan ">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  
+  <meta name="application-name" content="Origin Tokyo">
+  
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
@@ -23,23 +28,26 @@
   <div class="app-loading"></div>
 </div>
 <div class="page-wrapper" hidden-when-loading>
-  <div class="header">
-    <div class="navbar navbar-default" role="navigation">
+  <div ng-translate-language-select class="language-select"></div>
+  
+  <!-- <div class="header">
+    <div class="navbar navbar-inverse" role="navigation">
       <div class="container clearfix">
         <div class="pull-right">
-          <div ng-translate-language-select></div>
-        </div>
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+        </div> 
+        <div class="navbar-header"> -->
+          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-        </div>
+          </button> -->
+          <!-- <a class="navbar-brand" href="#/">
+            <img class="img-responsive" src="images/white_logo.png">
+          </a>
+        </div> -->
 
-        <div class="collapse navbar-collapse" id="js-navbar-collapse">
+        <!--<div class="collapse navbar-collapse" id="js-navbar-collapse">
 
           <ul class="nav navbar-nav">
             <li
@@ -47,7 +55,7 @@
               >
               <a ng-href="#/">{{"views.index.Home" | translate}}</a>
             </li>
-            <li
+             <li
               ng-class="{active: currentPath === '/about'}"
               >
               <a ng-href="#/about">{{"views.index.About" | translate}}</a>
@@ -56,22 +64,18 @@
               ng-class="{active: currentPath === '/contacts'}"
               >
               <a ng-href="#/contacts">{{"views.index.Contact" | translate}}</a>
-            </li>
+            </li> 
           </ul>
-        </div>
-      </div>
+        </div> -->
+      <!--</div>
     </div>
-  </div>
+  </div> -->
 
-  <div ng-view=""></div>
-  
-  <div class="footer">
-    <div class="container">
-      <p>{{"views.index.Copyright" | translate}} &copy; {{"views.index.Copyright year" | translate}}</p>
+  <div ng-view class="view-slide-in"></div>
 
-    </div>
-  </div>
 </div>
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 
 <!-- build:js(.) scripts/vendor.js -->
@@ -91,6 +95,8 @@
 <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
 <script src="bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
 <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+<script src="bower_components/lodash/dist/lodash.compat.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -102,6 +108,17 @@
 <script src="scripts/controllers/contacts.js"></script>
 <script src="scripts/services/LocaleService.js"></script>
 <script src="scripts/directives/LanguageSelectDirective.js"></script>
+<script src="scripts/controllers/terms.js"></script>
+<script src="scripts/controllers/creative.js"></script>
 <!-- endbuild -->
+
+<script type="text/javascript">
+  function customMessage() {
+    document.getElementById("ss-form").style.display = "none";
+    document.getElementById("form-message").style.display = "block";
+    //document.getElementById("form-message").innerHTML = "<h4 class='toast lead'>{{"views.main.thankyou" | translate}}</h4>";
+  }
+</script>
+
 </body>
 </html>
